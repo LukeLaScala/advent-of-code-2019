@@ -134,8 +134,6 @@ d = Machine([x for x in opcodes])
 e = Machine([x for x in opcodes])
 
 for perm in permutations(range(9, 4, -1)):
-    print("perm:" + str(perm))
-
     a.inputs.append(perm[0])
     b.inputs.append(perm[1])
     c.inputs.append(perm[2])
@@ -161,18 +159,12 @@ for perm in permutations(range(9, 4, -1)):
 
         a.inputs.append(e.outputs[-1])
 
-    print(str(e.outputs[-1]))
     signals.append(e.outputs[-1])
 
     a = Machine([x for x in opcodes])
-    a.reset()
     b = Machine([x for x in opcodes])
-    b.reset()
     c = Machine([x for x in opcodes])
-    c.reset()
     d = Machine([x for x in opcodes])
-    d.reset()
     e = Machine([x for x in opcodes])
-    e.reset()
 
 print("Part 2: " + str(max(signals)))
