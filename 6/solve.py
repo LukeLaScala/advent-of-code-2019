@@ -1,6 +1,3 @@
-import sys
-
-sys.setrecursionlimit(20000)
 class Node:
     parent = None
     children = []
